@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/chat_bubble.dart';
 import 'package:flutter_application_1/components/textfield.dart';
 import 'package:flutter_application_1/services/auth/auth_service.dart';
 import 'package:flutter_application_1/services/chat/chat_service.dart';
@@ -65,7 +66,7 @@ class Chatpage extends StatelessWidget {
         isCurrentUser ? Alignment.centerRight : Alignment.centerLeft;
     return Container(
       alignment: alignment,
-      child: Text(data["message"]),
+      child: ChatBubble(message: data['message'], isCurrentUser: isCurrentUser),
     );
   }
 
