@@ -13,21 +13,24 @@ class Usertile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.grey.shade300,
-          borderRadius: BorderRadius.circular(12),
-        ),
-        padding: const EdgeInsets.all(20),
-        margin: const EdgeInsets.symmetric(horizontal: 10),
-        child: Row(
-          children: [
-            const Icon(Icons.person),
-            const SizedBox(
-              width: 20,
-            ),
-            Text(text),
-          ],
+      child: Padding(
+        padding: const EdgeInsets.only(top: 10),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.grey.shade300,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          padding: const EdgeInsets.all(20),
+          margin: const EdgeInsets.symmetric(horizontal: 10),
+          child: Row(
+            children: [
+              const Icon(Icons.person),
+              const SizedBox(
+                width: 20,
+              ),
+              Text(text),
+            ],
+          ),
         ),
       ),
     );

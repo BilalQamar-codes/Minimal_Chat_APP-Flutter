@@ -27,6 +27,7 @@ class _ChatpageState extends State<Chatpage> {
       await chatService.sendMessage(widget.userId, messageController.text);
       messageController.clear();
     }
+    scrollDown();
   }
 
   @override
@@ -38,6 +39,8 @@ class _ChatpageState extends State<Chatpage> {
         Future.delayed(const Duration(microseconds: 500), () => scrollDown());
       }
     });
+
+    Future.delayed(Duration(seconds: 1), () => scrollDown());
   }
 
   final ScrollController myScroller = ScrollController();
