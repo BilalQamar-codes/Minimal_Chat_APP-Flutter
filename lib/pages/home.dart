@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text("Home"),
-        backgroundColor: Colors.grey.shade600,
+        backgroundColor: Colors.white,
         centerTitle: true,
       ),
       drawer: MyDrawer(),
